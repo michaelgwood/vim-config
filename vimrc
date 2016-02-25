@@ -3,12 +3,11 @@ set fileencodings=utf-8,latin1	" #UTF-8
 set nocompatible		" use Vim defaults
 set bs=2			" allow backspacing over everything in insert
 				" mode
-set background=dark		" I do prefer a dark bg
-if has("gui_running")
-  colorscheme torte		" and this colorschme on modern vim
-else
-  colorscheme elflord		" or this one when using the terminal
-endif
+"if has("gui_running")
+"  colorscheme torte		" and this colorschme on modern vim
+"else
+"  colorscheme elflord		" or this one when using the terminal
+"endif
 syntax on  			" give me colors !
 
 set modeline			" I want modelines (Debian disables it)
@@ -96,6 +95,10 @@ endif
 " Align arguments
 nmap ,a :GNOMEAlignArguments<CR>
 
+"" Command T
+
+nnoremap <C-f> :CommandT<CR>
+
 "split navigations
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -103,7 +106,7 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " git grep
-nnoremap <C-F> :Ggrep <cword><CR>
+nnoremap <C-G> :Ggrep <cword><CR>
 
 " previous/next buffer
 nnoremap <A-Right> :bnext<CR>
